@@ -1,0 +1,42 @@
+{
+    "scripts": {
+    "dev":"vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused",
+    "preview": "vite preview",
+    "server": "json-server --watch data/db.json"
+    },
+
+    "users": [
+        {
+            "id": 1,
+            "name": "João Silva",
+            "Senha": "1234"
+        },
+        {
+            "id": 2,
+            "name": "Maria Souza",
+            "Senha": "4321"
+        }
+    ],
+    "reservations": [
+        {
+            "id": 1,
+            "userId": 1,
+            "date": "2024-07-01",
+            "description": "Reserva para reunião"
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "date": "2024-07-02",
+            "description": "Reserva para evento"
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "date": "2024-07-03",
+            "description": "Reserva para treinamento"
+        }
+    ]
+}
