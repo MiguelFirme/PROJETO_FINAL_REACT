@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-
-export default function Login() {
+import { Link } from 'react-router-dom';
+ 
+export default function Signin() {
     
     
     return (
@@ -12,11 +12,11 @@ export default function Login() {
             </p>
         </div>
         <div>
-            <Link to="/reserva"><button>Entrar</button></Link>
-        </div>        
+            <Link to="/login"><button>Cadastrar</button></Link>
+        </div>
         <div>
-        <Link to="/signin">
-            Ainda não tem uma conta?
+        <Link to="/login">
+            Já tem uma conta?
         </Link>            
         </div>
         </>

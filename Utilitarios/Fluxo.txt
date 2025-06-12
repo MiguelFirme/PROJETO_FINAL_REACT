@@ -1,0 +1,25 @@
+[Tela Inicial (index.html)]
+    - Apresenta o espaço
+    - Botão "Acessar Reservas" (redireciona para Login.html)
+    - Link "Entrar" (redireciona para Login.html)
+
+       |
+       V
+
+[Tela de Login/Cadastro (login.html)]
+    - Formulário Login (email/senha)
+    - Link "Criar Conta"
+    - Após Login BEM-SUCEDIDO:
+        - Armazena userId no localStorage
+        - Redireciona para reserva.html
+
+       |
+       V (APENAS SE ESTIVER LOGADO)
+
+[Tela de Reserva (reserva.html)]
+    - **Verifica localStorage para userId.**
+    - SE NÃO TIVER userId: Redireciona para login.html
+    - SE TIVER userId: Carrega formulário de reserva.
+        - Ao Confirmar Reserva:
+            - Faz POST para JSON Server /reservas
+            - Inclui o userId na requisição.
