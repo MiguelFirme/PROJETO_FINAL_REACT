@@ -3,8 +3,6 @@ body, #root {
   min-height: 100vh;
   background: #4d6b7b;
   margin: 0;
-  border: 8px solid #898989;
-  box-sizing: border-box;
 }
 
 /* Centraliza o conteúdo */

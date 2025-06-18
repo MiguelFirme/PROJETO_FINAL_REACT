@@ -8,6 +8,7 @@ import Login from './assets/Components/Login.jsx'
 import Reserva from './assets/Components/Reserva.jsx'
 import Signin from './assets/Components/Signin.jsx'
 import Pagamento from './assets/Components/Pagamento.jsx'
+import MinhasReservas from './assets/Components/Carrinho.jsx'
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/pagamento',
         element: <Pagamento />  
+      },
+      {
+        path: '/carrinho',
+        element: <MinhasReservas />
       }
     ]
   }
