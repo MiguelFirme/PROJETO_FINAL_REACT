@@ -7,6 +7,7 @@ import Inicial from './assets/Components/PaginaInicial.jsx'
 import Login from './assets/Components/Login.jsx'
 import Reserva from './assets/Components/Reserva.jsx'
 import Signin from './assets/Components/Signin.jsx'
+import Pagamento from './assets/Components/Pagamento.jsx'
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/signin',
         element: <Signin />
+      },
+      {
+        path: '/pagamento',
+        element: <Pagamento />  
       }
     ]
   }

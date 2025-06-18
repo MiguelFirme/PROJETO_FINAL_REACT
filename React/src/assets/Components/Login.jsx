@@ -34,12 +34,7 @@ export default function Login() {
              teste tela de login
             </p>
         </div>       
-        <div>
-        <Link to="/signin">
-            Ainda não tem uma conta?
-        </Link>            
-        </div>
-
+        
         <form onSubmit={handleLogin}>
             <input
               type="name"
@@ -58,6 +53,12 @@ export default function Login() {
             <button type="submit">Entrar</button>
             {erro && <p style={{color: 'red'}}>{erro}</p>}
         </form>
+
+        <div>
+        <Link to="/signin">
+            Ainda não tem uma conta?
+        </Link>            
+        </div>
         </>
     );
 }

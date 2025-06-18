@@ -6,6 +6,7 @@ export default function Navbar() {
             <span style={{padding: '8px'}}><Link to={'/'}>Inicial</Link></span>
             <span style={{padding: '8px'}}><Link to={'login'}>Entrar</Link></span>
             <span style={{padding: '8px'}}><Link to={'reserva'}>Reservar</Link></span>
+            <span style={{padding: '8px'}}><Link to={'pagamento'}>Pagamento</Link></span>
         </div>
     )
 }
