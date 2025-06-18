@@ -1,0 +1,108 @@
+/* Fundo da página */
+body, #root {
+  min-height: 100vh;
+  background: #4d6b7b;
+  margin: 0;
+  border: 8px solid #898989;
+  box-sizing: border-box;
+}
+
+/* Centraliza o conteúdo */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo SVG */
+.calendar-icon {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo_h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.login-form {
+  background: rgba(255,255,255,0.04);
+  padding: 36px 28px 24px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  max-width: 90vw;
+}
+
+/* Input estilizado */
+.login-form input {
+  background: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  padding: 13px 16px;
+  font-size: 1.08rem;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  width: 100%;
+  outline: none;
+  transition: border .2s;
+}
+.login-form input:focus {
+  border: 1.5px solid #88a3c6;
+}
+.login-form input::placeholder {
+  color: #d1d9e6;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Botão estilizado */
+.login-form button {
+  background: #fff;
+  color: #4d6b7b;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 13px 0;
+  font-size: 1.07rem;
+  width: 100%;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.18s;
+}
+.login-form button:hover {
+  background: #e7ecf4;
+}
+
+.login-form .erro-msg {
+  color: #ff7676;
+  margin-top: 7px;
+  margin-bottom: -7px;
+  font-size: 0.99rem;
+}
+
+/* Link de registro */
+.signup-link {
+  margin-top: 18px;
+  text-align: center;
+}
+.signup-link a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.02rem;
+}
+.signup-link a:hover {
+  color: #ffdc91;
+}
