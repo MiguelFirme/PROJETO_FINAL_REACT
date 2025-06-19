@@ -52,6 +52,11 @@ export default function Pagamento() {
                         Número do cartão:
                         <input type="text" placeholder="Digite o número do cartão" />
                     </label>
+                    <label>
+                        <br />
+                        Validade:
+                        <input type="text" placeholder="Data de validade" />
+                    </label>
                 </div>
             )}
 
@@ -62,6 +67,7 @@ export default function Pagamento() {
                         <input type="text" placeholder="Digite o número do cartão" />
                     </label>
                     <label>
+                        <br />
                         Validade:
                         <input type="text" placeholder="Data de validade" />
                     </label>
@@ -69,12 +75,19 @@ export default function Pagamento() {
             )}
 
             {formaPagamento === "pix" && (
+            <>
                 <div>
-                    <label>
-                        Chave Pix:
-                        <input type="text" placeholder="Digite sua chave Pix" />
-                    </label>
+                    <img
+                        src="/Images/qrcode_pix.png"
+                        alt="QR Code Pix"
+                        style={{ width: 200, height: 200 }}
+                    />
                 </div>
+                <div>
+                    Chave Pix: <br />
+                    00020126580014BR.GOV.BCB.PIX01363e6f63a1-f179-430f-9bcd-2b8f5c92d08f52040000530398654040.015802BR5925Miguel Antonio Gregorio F6009SAO PAULO62140510wben3906m56304AD6B
+                </div>
+            </>
             )}
 
             {formaPagamento === "boleto" && (

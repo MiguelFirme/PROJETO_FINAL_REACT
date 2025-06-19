@@ -13,13 +13,18 @@ export default function Signin() {
         e.preventDefault();
         setErro("");
         try {
-            const res = await fetch(`http://localhost:3001/users?email=${nome}`);
+            const res = await fetch(`http://localhost:3001/users?name=${nome}`);
             const users = await res.json();
             if (users.length > 0) {
                 alert("Usuário já cadastrado!");
             } else {
-                alert("Cadastro realizado com sucesso!");
-                navigate("/login");
+                await fetch('http://localhost:3001/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ Nome: nome, Senha: senha })
+                });
             }
         } catch {
             setErro("Erro ao conectar com o servidor.");
