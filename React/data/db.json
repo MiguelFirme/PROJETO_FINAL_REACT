@@ -10,46 +10,62 @@
     {
       "id": "1",
       "name": "João Silva",
-      "Senha": "1234"
+      "Senha": "1234",
+      "email": "joao@email.com",
+      "telefone": "11999999999",
+      "Idade": "17"
     },
     {
       "id": "2",
       "name": "Maria Souza",
-      "Senha": "4321"
+      "Senha": "4321",
+      "email": "maria@email.com",
+      "telefone": "11988888888",
+      "Idade": "22"
     },
     {
       "id": "eee2",
-      "Nome": "Miguel",
-      "Senha": "1234"
+      "name": "Miguel",
+      "Senha": "1234",
+      "email": "miguel@email.com",
+      "telefone": "11977777777",
+      "Idade": "19"
     }
   ],
   "reservations": [
     {
       "id": "1",
-      "userId": 1,
+      "userId": "1",
       "ambienteId": 1,
       "date": "2024-07-01",
       "description": "Reserva para reunião"
     },
     {
       "id": "2",
-      "userId": 2,
+      "userId": "2",
       "ambienteId": 2,
       "date": "2024-07-02",
       "description": "Reserva para evento"
     },
     {
       "id": "3",
-      "userId": 1,
+      "userId": "1",
       "ambienteId": 1,
       "date": "2024-07-03",
       "description": "Reserva para treinamento"
     },
     {
       "id": "249a",
-      "userId": 1,
+      "userId": "1",
       "ambienteId": 1,
       "date": "2024-07-02",
+      "description": "Reserva feita pelo sistema"
+    },
+    {
+      "id": "58c8",
+      "userId": "1",
+      "ambienteId": 3,
+      "date": "2024-07-01",
       "description": "Reserva feita pelo sistema"
     }
   ]

@@ -16,6 +16,11 @@ export default function Login() {
       const res = await fetch(`http://localhost:3001/users?name=${nome}`);
       const users = await res.json();
       if (users.length > 0 && users[0].Senha === senha) {
+
+        localStorage.setItem(
+          "usuarioLogado",
+          JSON.stringify({ id: users[0].id, nome: users[0].nome }
+        ));
         alert("Login realizado com sucesso!");
         navigate("/reserva");
       } else {

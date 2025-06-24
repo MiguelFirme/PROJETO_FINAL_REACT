@@ -9,6 +9,7 @@ import Reserva from './assets/Components/Reserva.jsx'
 import Signin from './assets/Components/Signin.jsx'
 import Pagamento from './assets/Components/Pagamento.jsx'
 import MinhasReservas from './assets/Components/Carrinho.jsx'
+import PerfilDeUsuario from './assets/Components/PerfilDeUsuario.jsx'
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: '/carrinho',
         element: <MinhasReservas />
+      },
+      {
+        path: '/perfil',
+        element: <PerfilDeUsuario />
       }
     ]
   }

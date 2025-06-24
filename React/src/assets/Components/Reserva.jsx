@@ -85,6 +85,8 @@ export default function Reserva() {
         navigate('/pagamento'); // Troque para a rota desejada
     };
 
+     const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+
     return (
         <div className="reserva-container">
             {ambientes.map((ambiente) => (

@@ -8,6 +8,7 @@ export default function Navbar() {
             <span style={{padding: '8px'}}><Link to={'reserva'}>Reservar</Link></span>
             <span style={{padding: '8px'}}><Link to={'pagamento'}>Pagamento</Link></span>
             <span style={{padding: '8px'}}><Link to={'carrinho'}>Minhas Reservas</Link></span>
+            <span style={{padding: '8px'}}><Link to={'perfil'}>Perfil</Link></span>
         </div>
     )
 }
