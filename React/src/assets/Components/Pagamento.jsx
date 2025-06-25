@@ -84,7 +84,7 @@ export default function Pagamento() {
                 )}
 
                 {formaPagamento === "boleto" && (
-                    <div>
+                    <div className="paragrafo">
                         <p>O boleto será gerado após a confirmação do pedido.</p>
                     </div>
                 )}

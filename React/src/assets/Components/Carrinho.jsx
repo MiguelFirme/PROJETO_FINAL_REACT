@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // Certifique-se de criar e importar o CSS para suas reservas
+import './Carrinho.css';
+
 
 export default function MinhasReservas() {
     const [reservasDoUsuario, setReservasDoUsuario] = useState([]);

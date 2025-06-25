@@ -1,0 +1,95 @@
+.minhas-reservas-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #003580;
+  margin-bottom: 2rem;
+}
+
+.reservas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.reserva-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reserva-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.reserva-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.reserva-ambiente-nome {
+  color: #003580;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.reserva-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.reserva-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn-editar,
+.btn-excluir {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-editar {
+  background-color: #0071c2;
+  color: white;
+}
+
+.btn-editar:hover {
+  background-color: #005fa3;
+}
+
+.btn-excluir {
+  background-color: #c62828;
+  color: white;
+}
+
+.btn-excluir:hover {
+  background-color: #a91c1c;
+}
+
+@media (max-width: 600px) {
+  .reservas-grid {
+    grid-template-columns: 1fr;
+  }
+}

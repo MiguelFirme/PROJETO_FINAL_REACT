@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './PerfilDeUsuario.css';
 
 export default function PerfilDeUsuario() {
   const [usuario, setUsuario] = useState(null);
   const navigate = useNavigate();
 
-  // Recupera usuário logado do localStorage
   const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
   const userId = usuarioLogado ? usuarioLogado.id : null;
 
@@ -33,58 +33,30 @@ export default function PerfilDeUsuario() {
     alert("Dados atualizados!");
   };
 
-  const excluirConta = async () => {
-    const confirmar = window.confirm("Tem certeza que deseja excluir sua conta?");
-    if (confirmar) {
-      await fetch(`http://localhost:3001/users/${userId}`, {
-        method: 'DELETE'
-      });
-      localStorage.clear();
-      navigate('/login');
-    }
-  };
-
-  if (!usuario) return <p>Carregando...</p>;
+  if (!usuario) return null;
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '500px', margin: 'auto', position: 'relative' }}>
-      {/* Botão de excluir conta */}
-      <button
-        onClick={excluirConta}
-        style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          background: 'red',
-          color: 'white',
-          border: 'none',
-          padding: '0.5rem',
-          cursor: 'pointer'
-        }}
-      >
-        Excluir conta
-      </button>
-
-      <h2>Meu Perfil</h2>
-
-      <label>Nome:</label>
-      <input name="name" value={usuario.name || ''} onChange={handleChange} /><br />
-
-      <label>Email:</label>
-      <input name="email" value={usuario.email || ''} onChange={handleChange} /><br />
-
-      <label>Senha:</label>
-      <input type="password" name="Senha" value={usuario.Senha || ''} onChange={handleChange} /><br />
-
-      <label>Telefone:</label>
-      <input name="telefone" value={usuario.telefone || ''} onChange={handleChange} /><br />
-
-      <label>Idade:</label>
-      <input name="Idade" value={usuario.Idade || ''} onChange={handleChange} /><br />
-
-      <button onClick={salvarAlteracoes} style={{ marginTop: '1rem' }}>
-        Salvar Alterações
-      </button>
+    <div className="perfil-container">
+      <h2 className="perfil-titulo">Meu Perfil</h2>
+      <div className="perfil-form">
+        <label>
+          Nome:
+          <input type="text" name="nome" value={usuario.nome} onChange={handleChange} />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" value={usuario.email} onChange={handleChange} />
+        </label>
+        <label>
+          Telefone:
+          <input type="text" name="telefone" value={usuario.telefone || ''} onChange={handleChange} />
+        </label>
+        <label>
+          Endereço:
+          <input type="text" name="endereco" value={usuario.endereco || ''} onChange={handleChange} />
+        </label>
+        <button className="btn-salvar" onClick={salvarAlteracoes}>Salvar alterações</button>
+      </div>
     </div>
   );
 }

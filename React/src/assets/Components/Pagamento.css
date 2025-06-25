@@ -21,6 +21,13 @@
   margin-bottom: 2rem;
 }
 
+.paragrafo{
+    display: block;
+  margin-bottom: 1rem;
+  color: #003580;
+  font-weight: 500;
+}
+
 .opcoes-pagamento label {
   font-weight: 500;
   color: #003580;

@@ -7,7 +7,6 @@ export default function Navbar() {
       <div className="navContainer">
         <span className="logo">Reserve.com</span>
         <div className="navItems">
-          <Link to="/" className="navLink">Inicial</Link>
           <Link to="/login" className="navLink">Entrar</Link>
           <Link to="/reserva" className="navLink">Reservar</Link>
           <Link to="/pagamento" className="navLink">Pagamento</Link>
