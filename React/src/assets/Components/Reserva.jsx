@@ -24,7 +24,6 @@ export default function Reserva() {
 
     const navigate = useNavigate();
 
-    // Buscar reservas do backend
     useEffect(() => {
         fetch('http://localhost:3001/reservations')
             .then(res => res.json())
@@ -45,15 +44,23 @@ export default function Reserva() {
         }));
     };
 
-    // Função para saber se a data está reservada para o ambiente
     const isDataReservada = (ambienteId, data) => {
         return reservas.some(
             r => String(r.ambienteId) === String(ambienteId) && r.date === data
         );
     };
 
-    // Função para reservar e redirecionar
     const handleReservar = async (ambienteId) => {
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+        if (!usuarioLogado || !usuarioLogado.id) {
+            alert("Você precisa estar logado para fazer uma reserva!");
+            navigate('/entrar');
+            return;
+        }
+
+        const userId = usuarioLogado.id;
+
         const dataSelecionada = datasSelecionadas[ambienteId];
         if (!dataSelecionada) {
             alert("Selecione uma data!");
@@ -63,29 +70,30 @@ export default function Reserva() {
             alert("Esta data já está reservada para este ambiente!");
             return;
         }
-        // Exemplo: userId fixo, troque pelo usuário logado se necessário
-        const userId = 1;
+        
         const novaReserva = {
-            userId,
+            userId: userId,
             ambienteId,
             date: dataSelecionada,
             description: "Reserva feita pelo sistema"
         };
+        
         await fetch('http://localhost:3001/reservations', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(novaReserva)
         });
+
         alert("Reserva realizada com sucesso!");
-        // Atualiza as reservas
+        
         fetch('http://localhost:3001/reservations')
             .then(res => res.json())
             .then(data => setReservas(data));
-        // Redireciona para a página desejada
-        navigate('/pagamento'); // Troque para a rota desejada
+            
+        navigate('/pagamento');
     };
 
-     const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+    const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
 
     return (
         <div className="reserva-container">

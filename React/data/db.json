@@ -67,6 +67,13 @@
       "ambienteId": 3,
       "date": "2024-07-01",
       "description": "Reserva feita pelo sistema"
+    },
+    {
+      "id": "418c",
+      "userId": 1,
+      "ambienteId": 1,
+      "date": "2024-07-05",
+      "description": "Reserva feita pelo sistema"
     }
   ]
 }
