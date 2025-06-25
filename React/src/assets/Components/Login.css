@@ -1,9 +1,20 @@
 /* Fundo da página */
-body, #root {
-  min-height: 100vh;
-  background: #4d6b7b;
+body, #root, html {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.login-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: #142a55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Centraliza o conteúdo */
 .login-wrapper {
@@ -22,7 +33,7 @@ body, #root {
 }
 
 .titulo_h2 {
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   font-size: 1.7rem;
   font-weight: bold;
@@ -31,10 +42,10 @@ body, #root {
 }
 
 .login-form {
-  background: rgba(255,255,255,0.04);
+  background: #174ca19c;
   padding: 36px 28px 24px 28px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.788);
   display: flex;
   flex-direction: column;
   align-items: center;

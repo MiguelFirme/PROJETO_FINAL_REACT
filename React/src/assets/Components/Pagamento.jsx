@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Pagamento.css";
 
 export default function Pagamento() {
     const [formaPagamento, setFormaPagamento] = useState("");
@@ -8,93 +9,86 @@ export default function Pagamento() {
     };
 
     return (
-        <div>
-            <label>
-                <input
-                    type="radio"
-                    name="payment"
-                    value="credito"
-                    onChange={handleFormaPagamentoChange}
-                />
-                Cartão de crédito
-            </label>
-            <label>
-                <input
-                    type="radio"
-                    name="payment"
-                    value="debito"
-                    onChange={handleFormaPagamentoChange}
-                />
-                Cartão de débito
-            </label>
-            <label>
-                <input
-                    type="radio"
-                    name="payment"
-                    value="pix"
-                    onChange={handleFormaPagamentoChange}
-                />
-                Pix
-            </label>
-            <label>
-                <input
-                    type="radio"
-                    name="payment"
-                    value="boleto"
-                    onChange={handleFormaPagamentoChange}
-                />
-                Boleto
-            </label>
+        <div className="pagamento-container">
+            <h2>Escolha a forma de pagamento</h2>
 
-            {formaPagamento === "credito" && (
-                <div>
-                    <label>
-                        Número do cartão:
-                        <input type="text" placeholder="Digite o número do cartão" />
-                    </label>
-                    <label>
-                        <br />
-                        Validade:
-                        <input type="text" placeholder="Data de validade" />
-                    </label>
-                </div>
-            )}
-
-            {formaPagamento === "debito" && (
-                <div>
-                    <label>
-                        Número do cartão:
-                        <input type="text" placeholder="Digite o número do cartão" />
-                    </label>
-                    <label>
-                        <br />
-                        Validade:
-                        <input type="text" placeholder="Data de validade" />
-                    </label>
-                </div>
-            )}
-
-            {formaPagamento === "pix" && (
-            <>
-                <div>
-                    <img
-                        src="/Images/qrcode_pix.png"
-                        alt="QR Code Pix"
-                        style={{ width: 200, height: 200 }}
+            <div className="opcoes-pagamento">
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="credito"
+                        onChange={handleFormaPagamentoChange}
                     />
-                </div>
-                <div>
-                    Chave Pix: <br />
-                    00020126580014BR.GOV.BCB.PIX01363e6f63a1-f179-430f-9bcd-2b8f5c92d08f52040000530398654040.015802BR5925Miguel Antonio Gregorio F6009SAO PAULO62140510wben3906m56304AD6B
-                </div>
-            </>
-            )}
+                    Cartão de crédito
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="debito"
+                        onChange={handleFormaPagamentoChange}
+                    />
+                    Cartão de débito
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="pix"
+                        onChange={handleFormaPagamentoChange}
+                    />
+                    Pix
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="boleto"
+                        onChange={handleFormaPagamentoChange}
+                    />
+                    Boleto
+                </label>
+            </div>
 
-            {formaPagamento === "boleto" && (
-                <div>
-                    <p>O boleto será gerado após a confirmação do pedido.</p>
-                </div>
-            )}
+            <div className="campos-pagamento">
+                {(formaPagamento === "credito" || formaPagamento === "debito") && (
+                    <div>
+                        <label>
+                            Número do cartão:
+                            <input type="text" placeholder="Digite o número do cartão" />
+                        </label>
+                        <label>
+                            Validade:
+                            <input type="text" placeholder="MM/AA" />
+                        </label>
+                    </div>
+                )}
+
+                {formaPagamento === "pix" && (
+                    <>
+                        <div className="pix-section">
+                            <img
+                                src="/Images/qrcode_pix.png"
+                                alt="QR Code Pix"
+                                className="pix-qr"
+                            />
+                            <div className="pix-chave">
+                                Chave Pix:<br />
+                                <code>
+                                    00020126580014BR.GOV.BCB.PIX01363e6f63a1-f179...
+                                </code>
+                            </div>
+                        </div>
+                    </>
+                )}
+
+                {formaPagamento === "boleto" && (
+                    <div>
+                        <p>O boleto será gerado após a confirmação do pedido.</p>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

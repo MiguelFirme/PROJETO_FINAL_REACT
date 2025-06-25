@@ -98,9 +98,9 @@ export default function Reserva() {
                         Preço unitário: R$ {ambiente.preco.toFixed(2)}
                     </p>
                     <div style={{ margin: '1px 0', color: '#000' }}>
-                        <button onClick={() => alterarQuantidade(ambiente.id, -1)}>-</button>
-                        <span style={{ margin: '0 10px' }}>{quantidade[ambiente.id]} Horas</span>
-                        <button onClick={() => alterarQuantidade(ambiente.id, 1)}>+</button>
+                        <button className="quantidade-btn"onClick={() => alterarQuantidade(ambiente.id, -1)}>-</button>
+                        <span className="quantidade-span">{quantidade[ambiente.id]} Horas</span>
+                        <button className="quantidade-btn"onClick={() => alterarQuantidade(ambiente.id, 1)}>+</button>
                     </div>
                     <div style={{ margin: '10px 0' }}>
                         <label htmlFor={`data-${ambiente.id}`}>Data: </label>

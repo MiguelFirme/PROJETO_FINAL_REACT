@@ -1,0 +1,68 @@
+.pagamento-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.pagamento-container h2 {
+  text-align: center;
+  color: #003580;
+  margin-bottom: 1.5rem;
+}
+
+.opcoes-pagamento {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.opcoes-pagamento label {
+  font-weight: 500;
+  color: #003580;
+  cursor: pointer;
+}
+
+.campos-pagamento label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #003580;
+  font-weight: 500;
+}
+
+.campos-pagamento input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.pix-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pix-qr {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.pix-chave {
+  background-color: #003580;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: monospace;
+  text-align: center;
+  font-size: 0.85rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}

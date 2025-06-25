@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
+import "./navbar.css";
 
 export default function Navbar() {
-    return (
-        <div>
-            <span style={{padding: '8px'}}><Link to={'/'}>Inicial</Link></span>
-            <span style={{padding: '8px'}}><Link to={'login'}>Entrar</Link></span>
-            <span style={{padding: '8px'}}><Link to={'reserva'}>Reservar</Link></span>
-            <span style={{padding: '8px'}}><Link to={'pagamento'}>Pagamento</Link></span>
-            <span style={{padding: '8px'}}><Link to={'carrinho'}>Minhas Reservas</Link></span>
-            <span style={{padding: '8px'}}><Link to={'perfil'}>Perfil</Link></span>
+  return (
+    <div className="navbar">
+      <div className="navContainer">
+        <span className="logo">Reserve.com</span>
+        <div className="navItems">
+          <Link to="/" className="navLink">Inicial</Link>
+          <Link to="/login" className="navLink">Entrar</Link>
+          <Link to="/reserva" className="navLink">Reservar</Link>
+          <Link to="/pagamento" className="navLink">Pagamento</Link>
+          <Link to="/carrinho" className="navLink">Minhas Reservas</Link>
+          <Link to="/perfil" className="navLink">Perfil</Link>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
