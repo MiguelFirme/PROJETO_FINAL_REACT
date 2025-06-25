@@ -8,7 +8,9 @@
   font-family: Arial, sans-serif;
 }
 
-.container h2 {
+
+
+.minhas-reservas-container h2 {
   text-align: center;
   font-size: 1.8rem;
   color: #003580;
@@ -48,7 +50,7 @@
   margin-bottom: 0.5rem;
 }
 
-.reserva-card p {
+.reserva-card p, .minhas-reservas-container p {
   margin: 0.4rem 0;
   font-size: 0.95rem;
   color: #333;
